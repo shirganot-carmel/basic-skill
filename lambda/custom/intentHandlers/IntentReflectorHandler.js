@@ -11,7 +11,7 @@ const IntentReflectorHandler = {
     },
     handle(handlerInput) {
         const intentName = Alexa.getIntentName(handlerInput.requestEnvelope);
-        const speakOutput = handlerInput.t('REFLECTOR_MSG', { intentName: intentName });
+        const speakOutput = `You just triggered ${intentName}`;
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
